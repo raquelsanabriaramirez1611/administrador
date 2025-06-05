@@ -1,0 +1,44 @@
+﻿@model List<Practica1.Models.ViewModels.cListaSucursales>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sucursales</h2>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <input type="button" class="btn btn-primary w-100 btn-lg" onclick="document.location.href='@Url.Content("~/Sucursal/Create")'" value="Nueva Sucursal" />
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sucursal ID</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Consultar</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var fila in Model)
+                {
+                    <tr>
+                        <td>@fila.SucursalID</td>
+                        <td>@fila.Nombre</td>
+                        <td>@fila.Direccion</td>
+                        <td>@fila.Telefono</td>
+                        <td><input type="button" value="Consultar" class="btn btn-success" onclick="document.location.href='@Url.Content("~/Sucursal/Details/" + fila.SucursalID)'" /></td>
+                        <td><input type="button" value="Editar" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Sucursal/Edit/" + fila.SucursalID)'" /></td>
+                        <td><input type="button" value="Eliminar" class="btn btn-danger" onclick="document.location.href='@Url.Content("~/Sucursal/Delete/" + fila.SucursalID)'" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
