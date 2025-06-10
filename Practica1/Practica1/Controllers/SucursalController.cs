@@ -1,4 +1,5 @@
 ﻿using Practica1.Models;
+using Practica1.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,26 @@ namespace Practica1.Controllers
         // GET: Sucursal/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            try
+            {
+                cSucursal sucursal = new cSucursal();
+                using(Practica1Entities db = new Practica1Entities())
+                {
+                    var sucursalData = db.Sucursal.FirstOrDefault(s => s.SucursalId  == id);
+                    if (sucursalData != null)
+                    {
+                        sucursal.SucursalID = sucursalData.SucursalId;
+                        sucursal.Nombre = sucursalData.Nombre;
+                        sucursal.Direccion = sucursalData.Direccion;
+                        sucursal.Telefono = sucursalData.Telefono;
+                    }
+                    return View(sucursal);
+                }
+            }catch (Exception ex)
+            {
+                return View("Error", new HandleErrorInfo(ex, "Sucursal", "Details"));
+            }
+                
         }
 
         // GET: Sucursal/Create
