@@ -154,7 +154,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModels\cListaSucursales.cs" />
+    <Compile Include="Models\ViewModels\createSucursal.cs" />
     <Compile Include="Models\ViewModels\cSucursal.cs" />
+    <Compile Include="Models\ViewModels\editSucursal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +229,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sucursal\Details.cshtml" />
     <Content Include="Views\Sucursal\Index.cshtml" />
+    <Content Include="Views\Sucursal\Create.cshtml" />
+    <Content Include="Views\Sucursal\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
