@@ -1,4 +1,4 @@
-﻿
+﻿@model Practica1.Models.ViewModels.cSucursal
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,42 @@
 
 <h2>Details</h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.SucursalID)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model => model.SucursalID)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model => model.Nombre)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Direccion)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model => model.Direccion)
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(model => model.Telefono)
+    </div>
+    <div class="col-md-8">
+        @Html.DisplayFor(model => model.Telefono)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <input type="button" class="btn-outline-success w-100" btn-lg" value="Volver" onclick="document.location.href='@Url.Content("~/Sucursal/Index")'"/>
+    </div>
+    </div>
+</div>

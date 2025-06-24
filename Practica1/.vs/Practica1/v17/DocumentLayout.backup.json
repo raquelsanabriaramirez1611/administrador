@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Repositorio\\Practica1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71C703C6-BF7A-456F-8B70-8C00AD6E3C8F}|Practica1\\Practica1.csproj|c:\\repositorio\\practica1\\practica1\\controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71C703C6-BF7A-456F-8B70-8C00AD6E3C8F}|Practica1\\Practica1.csproj|solutionrelative:practica1\\controllers\\sucursalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SucursalController.cs",
+              "DocumentMoniker": "C:\\Repositorio\\Practica1\\Practica1\\Controllers\\SucursalController.cs",
+              "RelativeDocumentMoniker": "Practica1\\Controllers\\SucursalController.cs",
+              "ToolTip": "C:\\Repositorio\\Practica1\\Practica1\\Controllers\\SucursalController.cs",
+              "RelativeToolTip": "Practica1\\Controllers\\SucursalController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T01:45:47.045Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

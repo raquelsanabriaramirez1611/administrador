@@ -8,6 +8,47 @@
 <br />
 <br />
 
+@if (TempData["ValorMensaje"] != null)
+{
+    if ((int)TempData["ValorMensaje"] == 1)
+    {
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="document.location.href='@Url.Content("~/Sucursal/Index")'">&times;</button>
+                        <h2 class="modal-title">Mensaje</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success">TempData["MensajeEliminado"]</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" onclick="document.location.href='@Url.Content("~/Sucursal/Index")'">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if ((int)TempData["ValorMensaje"] == 0)
+    {
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Mensaje</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger">TempData["MensajeEliminado"]</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
 <div class="row">
     <div class="col-md-4">
         <input type="button" class="btn btn-primary w-100 btn-lg" onclick="document.location.href='@Url.Content("~/Sucursal/Create")'" value="Nueva Sucursal" />
@@ -42,3 +83,8 @@
         </table>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#myModal').modal('show');
+    });
+</script>
